@@ -7,6 +7,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -17,6 +19,14 @@ public class ProductDetailServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		HttpSession session = request.getSession(false); // 세션 객체 가져오기
+		
+		if (session.getAttribute("username") == null) {
+			response.sendRedirect("loginForm.jsp"); 
+			return;
+		}
+		
 		int productId = Integer.parseInt(request.getParameter("productId")); // 상품 ID를 파라미터에서 가져오기
 
 		try {

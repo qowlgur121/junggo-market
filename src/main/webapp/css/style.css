@@ -8,17 +8,17 @@ body {
 
 h1 {
 	text-align: center;
-	color: #3498db;
+	color: orange;
 	margin-bottom: 20px;
 }
 
 a {
-	color: #3498db;
+	color: orange;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #2980b9;
+	color: orange;
 }
 
 p {
@@ -52,7 +52,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="num
 }
 
 input[type="submit"] {
-	background-color: #3498db;
+	background-color: orange;
 	color: white;
 	padding: 10px 15px;
 	border: none;
@@ -61,7 +61,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-	background-color: #2980b9;
+	background-color: orange;
 }
 
 table {
@@ -83,10 +83,10 @@ table th {
 /* 링크 스타일 설정 */
 a {
 	text-decoration: none;
-	color: #3498db;
+	color: orange;
 }
 
 a:hover {
-	color: #2980b9;
+	color: orange;
 }
 

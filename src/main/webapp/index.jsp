@@ -6,7 +6,9 @@
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>중고마켓</h1>
+	<header>
+		<h1>중고마켓</h1>
+	</header>
 	<%-- 세션에 username이 없으면 로그인 링크를 보여준다 --%>
 	<%
 	if (session.getAttribute("username") == null) {
@@ -14,6 +16,11 @@
 	<a href="loginForm.jsp">로그인</a>
 	<br>
 	<a href="registerForm.jsp">회원가입</a>
+	<br>
+	<a href="productList">상품 목록</a>
+	<br>
+	<a href="productSearchForm.jsp">상품 검색</a>
+	<br>
 	<%} else {%>
 	<%-- 세션에 username이 있으면 사용자이름과 로그아웃 링크, 상품등록 링크를 보여준다 --%>
 	<p>
